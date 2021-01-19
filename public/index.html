@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/favicon.svg" type="image/svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Selamat Datang - X TKJ 2</title>
+</head>
+
+<body>
+  <!-- Loader page from Red Stapler-->
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <!-- Finish Loader -->
+
+  <div class="container">
+    <header>
+      <h1 class="logo">SMKN 1 Glagah<span>.</span></h1>
+      <nav>
+        <li class="active">Home</li>
+        <li><a href="nav/article.html">Artikel</a></li>
+        <li><a href="nav/gallery.html">Galeri</a></li>
+        <li><a href="nav/school.html">Sekolah</a></li>
+        <li><a href="nav/about.html">Tentang</a></li>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="wcm">Selamat Datang <br> di Website Kami<span>.</span></h1>
+      <p>Website ini dibuat oleh siswa</p>
+      <a href="nav/school.html">sekolah</a>
+
+      <!-- Decoration -->
+      <img src="assets/decoration.svg">
+      <div class="circle-orange"></div>
+      <div class="circle-blue"></div>
+    </main>
+
+    <footer>©2020 tkj2semegah.web.app</footer>
+    <nav class="mobile">
+      <a href="#"><img src="assets/mobile/home_.svg"></a>
+      <a href="nav/article.html"><img src="assets/mobile/artikel.svg"></a>
+      <a href="nav/gallery.html"><img src="assets/mobile/galeri.svg"></a>
+      <a href="nav/school.html"><img src="assets/mobile/sekolah.svg"></a>
+      <a href="nav/about.html"><img src="assets/mobile/tentang.svg"></a>
+    </nav>
+  </div>
+
+  <!-- Load -->
+  <script>
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
+  <!-- Finish Load -->
+
+</body>
+
+</html>

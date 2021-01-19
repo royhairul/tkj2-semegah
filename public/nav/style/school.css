@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&family=Viga&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: #2b302b;
+  width: 100vw;
+  height: max-content;
+  overflow-x: hidden;
+}
+
+/* Loader Page  */
+/* From Red Stapler */
+body .loader-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2b302b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(255, 211, 3, 0.5);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #ffac1d;
+  animation: loader 2s infinite ease;
+  z-index: 1000;
+}
+
+.loader-inner {
+  vertical-align: top;
+  box-shadow: 0px 0px 20px rgba(255, 211, 3, 0.5);
+  display: inline-block;
+  width: 100%;
+  background-color: #ffac1d;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+/* Finish Loader */
+
+.container {
+  box-sizing: border-box;
+  padding: 20px 100px;
+  background-color: #2b302b;
+  color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container nav.mobile {
+  display: none;
+}
+
+span {
+  color: #ffd600;
+}
+
+li.active {
+  color: #747474;
+  cursor: default;
+}
+
+/* Header */
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1.logo {
+  width: max-content;
+  font-family: "Viga", sans-serif;
+  font-weight: 400;
+  cursor: default;
+}
+
+header nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+header nav li a {
+  text-decoration: none;
+  color: #efefef;
+  position: relative;
+}
+
+header nav li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-color: #75c7f2;
+  margin-top: 2px;
+}
+
+header nav li a:hover::after {
+  transition: 0.3s;
+  width: 100%;
+}
+
+/* Main */
+main {
+  width: 80%;
+  margin: auto;
+}
+
+main h1 {
+  margin-top: 50px;
+  font-weight: 500;
+}
+
+main h1::after {
+  content: "";
+  display: block;
+  width: 5%;
+  height: 3px;
+  background-color: #ffac1d;
+}
+
+main .info {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 50px 0;
+  align-items: center;
+}
+
+main .info .lambang {
+  width: 300px;
+  height: 300px;
+  background-color: #efefef;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+main .info .lambang::after {
+  content: "Logo SMKN 1 Glagah";
+  box-sizing: border-box;
+  padding-top: 10px;
+  color: #2b302b;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 500;
+}
+
+main .info .lambang img {
+  position: static;
+  width: 250px;
+}
+
+main .info .content {
+  width: 60%;
+}
+
+main .info .content h2 {
+  margin-top: 0.2em;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+main .info .content p {
+  margin: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.8em;
+  color: #dad8d8;
+  font-weight: 300;
+}
+
+main .info .content p span {
+  font-weight: 500;
+  font-style: italic;
+  color: #dad8d8;
+}
+
+main .history {
+  margin-top: 50px;
+}
+
+main .history h2 {
+  width: max-content;
+  margin-top: 0.2em;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+main .history h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 5px;
+  background-color: #6e6e6e;
+  border-radius: 100px;
+}
+
+main .history p {
+  margin: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6em;
+  color: #dad8d8;
+  font-weight: 300;
+}
+
+main p.sbr {
+  margin-top: 40px;
+}
+
+main p.sbr a {
+  text-decoration: none;
+  color: #75c7f2;
+}
+
+/* Decoration */
+main img {
+  width: 40vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.circle-orange {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: -100px;
+  top: 210px;
+  border-radius: 50%;
+  background: linear-gradient(39.92deg, #ffd600 16.53%, #ffac1d 42.17%);
+  box-shadow: 0px 4px 100px rgba(255, 211, 3, 0.5);
+}
+
+.circle-blue {
+  z-index: 2;
+  width: 380px;
+  height: 380px;
+  position: absolute;
+  left: -300px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: linear-gradient(149.51deg, #75c7f2 39.09%, #55ffca 81.47%);
+  box-shadow: 0px 4px 100px rgba(88, 252, 205, 0.5);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  color: #adadad;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  cursor: default;
+  padding: 30px 0;
+}
+
+/* Tablet version */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  /* Header */
+  h1.logo {
+    width: 30%;
+    font-family: "Viga", sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+
+  header nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+    font-size: 0.8em;
+  }
+
+  header nav li a {
+    text-decoration: none;
+    color: #efefef;
+    position: relative;
+  }
+
+  header li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: #75c7f2;
+    margin-top: 2px;
+  }
+
+  header nav li a:hover::after {
+    transition: 0.3s;
+    width: 100%;
+  }
+}
+
+/* Mobile version */
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 16px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 5px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container nav.mobile {
+    box-sizing: border-box;
+    display: flex;
+    width: 100vw;
+    background-color: #efefef;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container nav.mobile a:active {
+    background-color: #ffac1d;
+  }
+
+  .container nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 50px;
+  }
+
+  .container nav a img {
+    width: 30%;
+  }
+
+  /* Header */
+  header {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  header h1.logo {
+    margin: 20px auto 0;
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  /* Main */
+  main h1 {
+    margin-top: 10px;
+  }
+
+  main h1::after {
+    content: "";
+    display: block;
+    width: 5%;
+    height: 3px;
+    background-color: #ffac1d;
+  }
+
+  main .info {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .info .lambang {
+    width: 100%;
+    background-color: #efefef;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+
+  main .info .lambang::after {
+    content: "Logo SMKN 1 Glagah";
+    box-sizing: border-box;
+    padding-top: 10px;
+    color: #2b302b;
+    font-size: 0.9em;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  main .info .lambang img {
+    width: 60%;
+  }
+
+  main .info .content {
+    width: 100%;
+  }
+
+  main .info .content h2 {
+    font-size: 1.6em;
+  }
+
+  main .info .content p {
+    font-size: 0.9em;
+    line-height: 1.6em;
+    color: #dad8d8;
+    font-weight: 300;
+  }
+
+  main .history {
+    margin-top: 10px;
+  }
+
+  main .history h2 {
+    width: max-content;
+    font-size: 1.6em;
+  }
+
+  main .history h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: 5px;
+    background-color: #6e6e6e;
+    border-radius: 100px;
+  }
+
+  main .history p {
+    margin: 10px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em;
+    line-height: 1.6em;
+    color: #dad8d8;
+    font-weight: 300;
+  }
+
+  main p.sbr {
+    margin-top: 40px;
+  }
+
+  main p.sbr a {
+    text-decoration: none;
+    color: #75c7f2;
+  }
+
+  /* Decoration */
+  .circle-orange,
+  .circle-blue {
+    display: none;
+  }
+}
+/* Mobile L */
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
